@@ -1,12 +1,12 @@
 {
-  "title": "Your Blog Name",
-  "url": "https://myurl.com/",
+  "title": "Kirsten Bell",
+  "url": "https://kirsten-bell.com/",
   "description": "I am writing about my experiences as a naval navel-gazer.",
   "feed": {
     "subtitle": "I am writing about my experiences as a naval navel-gazer.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://myurl.com/"
+    "id": "https://kirsten-bell.com/"
   },
   "author": {
     "name": "Your Name Here",

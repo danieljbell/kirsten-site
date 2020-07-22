@@ -1,14 +1,52 @@
 ---
 layout: layouts/home.njk
-eleventyNavigation:
-  key: Home
-  order: 1
 ---
 
-<h1>Latest 3 Posts</h1>
+<section class="hero">
+  <div class="site-width">
+    <div class="hero--content">
+      <img src="{{ '/img/kirsten.jpg' | url }}" alt="Kirsten" width="450" height="450" />
+      <div class="hero--copy">
+        <h1>Hey There!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ratione illum nobis animi tempora sed!</p>
+        <a href="#contact-me" class="button">Do This</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-{% set postslist = collections.posts | head(-3) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "postslist.njk" %}
+<section class="about-me" style="min-height: 300px;">
+  <div class="site-width">
+    <header>
+      <h2>Some Bad Ass Shit I Do</h2>
+    </header>
+  </div>
+</section>
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+<section class="contact-me" id="contact-me">
+  <div class="site-width">
+    <header>
+      <h2>Contact Me</h2>
+    </header>
+    <form class="contact-form" netlify>
+      <div class="field">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" placeholder="First Name">
+      </div>
+      <div class="field">
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+      </div>
+      <div class="field">
+        <label for="emailAddress">Email Address</label>
+        <input type="email" name="emailAddress" id="emailAddress" placeholder="Email Address">
+      </div>
+      <div class="field">
+        <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+      </div>
+      <div class="field">
+        <input type="submit" value="Get In Touch">
+      </div>
+    </form>
+  </div>
+</section>

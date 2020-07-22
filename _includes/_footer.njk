@@ -1,0 +1,28 @@
+<footer class="site-footer">
+  <div class="site-width">
+    <nav>
+      <div class="footer--site-nav">
+        <h2>Site Links</h2>
+        <ul>
+          {%- for entry in collections.all | eleventyNavigation %}
+            <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div class="footer--contact">
+        <h2>Get In Touch</h2>
+        <ul>
+          <li>
+            <a href="mailto:kirstenellbell@gmail.com"><img src="{{ '/img/icon--email.svg' | url }}" alt="email icon">Email</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/kirsten-bell/"><img src="{{ '/img/icon--linkedin.svg' | url }}" alt="linkedin icon">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/formerlyksord/"><img src="{{ '/img/icon--instagram.svg' | url }}" alt="instagram icon">Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</footer>

@@ -1,0 +1,11 @@
+$brand: #ece2d6;
+$accent: #faaf9f;
+$accent-two: #d0e6e3;
+$black: #444;
+$gray: #ccc;
+
+@mixin tablet {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}

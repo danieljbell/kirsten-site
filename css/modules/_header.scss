@@ -1,0 +1,106 @@
+.menu--is-open {
+  overflow: hidden;
+}
+
+header.site-header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background-color: transparent;
+  transition: all 200ms ease-out;
+  .menu--is-open & {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+header.slim {
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(black, 0.3);
+  z-index: 100;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.header--home {
+  flex-grow: 2;
+  z-index: 101;
+  a {
+    display: inline-block;
+    width: auto;
+    border-bottom: 0 !important;
+    padding: 2rem 1rem !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+    
+    .slim & {
+      padding: 1rem !important;
+    }
+
+  }
+}
+
+header nav ul {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  flex-grow: 2;
+  @include tablet {
+    display: flex;
+    flex-grow: unset;
+  }
+
+  .menu--is-open & {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 100;
+    padding-top: 4rem;
+  }
+
+}
+
+.menu--is-open header.slim nav ul {
+  padding-top: 3rem;
+}
+
+
+header nav a {
+  display: block;
+  padding: 2rem 1rem;
+  transition: all 200ms ease-out;
+  text-decoration: none;
+  color: inherit;
+
+  .menu--is-open & {
+    border-bottom: 1px solid $gray;
+    padding: 1rem 2rem;
+  }
+
+}
+
+.slim nav a {
+  padding: 0.5rem 1rem;
+}
+
+#menuToggle {
+  z-index: 101;
+  
+  @include tablet {
+    display: none;
+  }
+
+  &:hover {
+    transform: unset;
+  }
+
+}

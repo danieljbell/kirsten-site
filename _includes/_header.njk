@@ -1,0 +1,19 @@
+<header class="site-header">
+  <div class="site-width">
+    <nav>
+      <div class="header--home">
+        <a href="{{ '/' | url }}">{{ metadata.title }}</a>
+      </div>
+      <ul>
+      {%- for entry in collections.all | eleventyNavigation %}
+        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+      {%- endfor %}
+      </ul>
+      <button id="menuToggle" class="hamburger hamburger--spin" type="button" aria-label="Menu" aria-controls="navigation">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </nav>
+  </div>
+</header>
