@@ -8,6 +8,21 @@
     align-items: center;
   }
 
+  .page--resume & .site-width {
+    flex-direction: column;
+    
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    @include tablet {
+      flex-direction: row;
+      h1 {
+        margin-bottom: 0rem;
+      }
+    }
+  }
+
   img {
     display: block;
     max-width: 75px;
@@ -30,16 +45,29 @@
     background-color: $accent-two;
   }
 
+  .resume--download-file {
+    order: 1;
+    background-color: $black;
+    @include tablet {
+      position: absolute;
+      right: 0;
+    }
+  }
+
 }
 
 .tmpl-post .post {
-  display: grid;
-  grid-gap: 3rem;
-  grid-template-columns: 1fr;
 
   @include tablet {
-    grid-template-columns: 2fr 1fr;
+    display: grid;
+    grid-template-columns: 200px auto 200px;
+    
+    article {
+      grid-column: 2/3;
+    }
+
   }
+
 
   p {
     margin-bottom: 1rem;
@@ -53,10 +81,15 @@
 
 .resume--jobs {
   list-style-type: none;
-  padding-left: 1.65rem;
   border-left: 1px dashed $gray;
   position: relative;
   z-index: 1;
+  margin-left: 1rem;
+  padding-left: 1.7rem;
+
+  @include tablet {
+    
+  }
 
   li.job {
     position: relative;

@@ -8,6 +8,9 @@ templateClass: tmpl-post
     {% if icon %}
       <img src="{{ icon | url }}" alt="">
     {% endif %}
+    {% if page.url === '/resume/' %}
+      <a download class="button resume--download-file" href="{{ '/files/KB_resume.pdf' | url }}">Download to .pdf</a>
+    {% endif %}
     <h1>{{ title }}</h1>
   </div>  
 </section>
@@ -18,15 +21,6 @@ templateClass: tmpl-post
       <article>
         {{ content | safe }}
       </article>
-      <aside>
-        <div class="sidebar">
-          <ul>
-            {%- for post in collections.work -%}
-              <li><a href="{{post.url}}">{{post.data.title}}</a></li>
-            {%- endfor -%}
-          </ul>
-        </div>
-      </aside>
     </div>
   </div>
 </section>

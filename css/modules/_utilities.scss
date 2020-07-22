@@ -2,6 +2,7 @@
   width: calc(100% - 2rem);
   margin-left: auto;
   margin-right: auto;
+  position: relative;
   @include tablet {
     max-width: 1080px;
   }

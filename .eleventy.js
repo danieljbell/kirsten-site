@@ -39,6 +39,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("js");
+  eleventyConfig.addPassthroughCopy("files");
   eleventyConfig.addWatchTarget("js/*.js");
 
   eleventyConfig.addPassthroughCopy({
@@ -50,10 +51,6 @@ module.exports = function (eleventyConfig) {
     html: true,
     breaks: true,
     linkify: true
-  }).use(markdownItAnchor, {
-    permalink: true,
-    permalinkClass: "direct-link",
-    permalinkSymbol: "#"
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
 
