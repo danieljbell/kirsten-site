@@ -11,6 +11,7 @@ input[type="submit"] {
   transition: all 100ms ease-out;
   text-decoration: none;
   color: #fff;
+  -webkit-appearance: none;
 }
 
 button:hover,

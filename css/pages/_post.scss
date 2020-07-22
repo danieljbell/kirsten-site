@@ -1,6 +1,23 @@
 .tmpl-post .hero {
   padding-top: 10rem;
   padding-bottom: 2rem;
+  background-color: $accent-two;
+  
+  .site-width {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    display: block;
+    max-width: 75px;
+    margin-right: 2rem;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+
 }
 
 .tmpl-post .post {
