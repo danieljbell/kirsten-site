@@ -4,6 +4,7 @@ tags: work
 excerpt: Employee benefits aren't beneficial if employees don't know how to use them. And honestly, who's considering themselves a healthcare expert these days? To ensure company healthcare dollars are being spent responsibility and employees are feeling the benefits of their... well... benefits, we need to leverage <strong>education</strong>.
 layout: layouts/post.njk
 icon: '/img/icon--educate.svg'
+color: accent
 ---
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 

@@ -18,6 +18,18 @@
     margin-bottom: 0;
   }
 
+  &.brand {
+    background-color: $brand;
+  }
+  
+  &.accent {
+    background-color: $accent;
+  }
+
+  &.accent-two {
+    background-color: $accent-two;
+  }
+
 }
 
 .tmpl-post .post {

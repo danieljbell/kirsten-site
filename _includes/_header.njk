@@ -8,6 +8,7 @@
       {%- for entry in collections.all | eleventyNavigation %}
         <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
       {%- endfor %}
+      <li class="nav-item"><a href="/#contact-me">Contact Me</a></li>
       </ul>
       <button id="menuToggle" class="hamburger hamburger--spin" type="button" aria-label="Menu" aria-controls="navigation">
         <span class="hamburger-box">

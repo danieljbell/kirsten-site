@@ -3,9 +3,11 @@ layout: layouts/base.njk
 templateClass: tmpl-post
 ---
 
-<section class="hero">
+<section class="hero {{ color }}">
   <div class="site-width">
-    <img src="{{ icon | url }}" alt="">
+    {% if icon %}
+      <img src="{{ icon | url }}" alt="">
+    {% endif %}
     <h1>{{ title }}</h1>
   </div>  
 </section>

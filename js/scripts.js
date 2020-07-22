@@ -4,6 +4,10 @@
 
   function init() {
 
+    if (window.location.pathname === '/') {
+      setUpWaypoints();
+    }
+
     this.pageHeader = document.querySelector('header');
     this.menuToggle = document.querySelector('#menuToggle');
 
@@ -31,6 +35,39 @@
 
 })();
 
+
+function setUpWaypoints() {
+  const points = document.querySelectorAll('.work--item');
+  points.forEach(function (point) {
+    new Waypoint({
+      element: point,
+      handler: function (direction) {
+        if (direction === 'down') {
+          point.classList.add('animate')
+        }
+      },
+      offset: '75%'
+    });
+
+    new Waypoint({
+      element: point,
+      handler: function (direction) {
+        if (direction === 'up') {
+          point.classList.remove('animate')
+        }
+      },
+      offset: '100%'
+    })
+  });
+}
+
+
+
+/* 
+====================
+POLYFILL FOR CLOSEST
+==================== 
+*/
 if (window.Element && !Element.prototype.closest) {
   Element.prototype.closest =
     function (s) {

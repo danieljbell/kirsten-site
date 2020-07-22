@@ -39,8 +39,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("js");
-
   eleventyConfig.addWatchTarget("js/*.js");
+
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/waypoints/lib/noframework.waypoints.min.js": "js/waypoints.js"
+  });
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({

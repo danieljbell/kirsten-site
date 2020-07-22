@@ -24,7 +24,7 @@ layout: layouts/home.njk
     </header>
     <ul class="work--grid">
       {%- for post in collections.work -%}
-        <li class="work--item">
+        <li class="work--item {{post.data.color}}">
           <div class="work--image">
             <a href="{{post.url}}">
               <img src="{{post.data.icon}}" alt="{{ post.data.title }} thumbnail">

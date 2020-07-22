@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "eleventy-plugin-sass": "^1.0.0",
-    "hamburgers": "^1.1.3"
+    "hamburgers": "^1.1.3",
+    "waypoints": "^4.0.1"
   }
 }

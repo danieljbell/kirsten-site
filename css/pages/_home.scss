@@ -1,12 +1,12 @@
 .hero {
   background-color: $brand;
   padding-bottom: 0;
-  margin-top: -6.1rem;
+  // margin-top: -6.1rem;
   padding-top: 7.5rem;
   text-align: center;
   position: relative;
   @include tablet {
-    padding-top: 5.5rem;
+    // padding-top: 5.5rem;
     text-align: left;
   }
 }
@@ -42,7 +42,7 @@
     border-radius: 3px;
     box-shadow: 3px 3px 40px rgba(black, 0.2);
     position: relative;
-    top: -3.5vh;
+    top: -3.5rem;
   }
 
   @include laptop {
@@ -89,7 +89,7 @@
   .work--image a {
     display: flex;
     text-align: center;
-    background-color: $accent-two;
+    background-color: $accent;
     border-radius: 100%;
     overflow: hidden;
     max-width: 300px;
@@ -102,8 +102,26 @@
     justify-content: center;
   }
 
+  &.brand .work--image a,
+  &.brand .button {
+    background-color: $brand;
+    color: $black;
+  }
+
+  &.accent-two .work--image a,
+  &.accent-two .button {
+    background-color: $accent-two;
+    color: $black;
+  }
+
   .work--image img {
     max-width: 75%;
+    transform: translateY(150%);
+    transition: transform 600ms cubic-bezier(0, 0, 0.65, 1.52)
+  }
+
+  &.animate .work--image img {
+    transform: translateY(0);
   }
 
   .work--title a {
@@ -117,10 +135,10 @@
     margin-bottom: 2rem;;
   }
 
-  .button {
-    background-color: $accent-two;
-    color: $black;
-  }
+  // .button {
+  //   background-color: $accent-two;
+  //   color: $black;
+  // }
 
 }
 
