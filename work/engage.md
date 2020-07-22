@@ -1,7 +1,7 @@
 ---
 title: Engage
 tags: work
-excerpt: When asked by a prospective employee about your Total Rewards bundle, you will inevitably begin rattling off a list of perks, discounts and group plans available to that prospect upon signing. So why, after that long list of expensive, thought out and carefully curated STUFF are your employees citing 'benefits' as their reason for leaving at the exit interview? Time to engage.
+excerpt: When asked by a prospective employee about your Total Rewards bundle, you will inevitably begin rattling off a list of perks, discounts and group plans available to that prospect upon signing. So why, after that long list of expensive, thought out and carefully curated STUFF are your employees citing 'benefits' as their reason for leaving at the exit interview? Time to <strong>engage</strong>.
 layout: layouts/post.njk
 ---
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
