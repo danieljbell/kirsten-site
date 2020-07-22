@@ -37,6 +37,9 @@ header nav {
     padding: 2rem 1rem !important;
     font-weight: bold;
     font-size: 1.5rem;
+    @include tablet {
+      margin-left: -1rem;
+    }
     
     .slim & {
       padding: 1rem !important;

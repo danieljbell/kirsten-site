@@ -4,11 +4,6 @@ $accent-two: #d0e6e3;
 $black: #444;
 $gray: #ccc;
 
-// #d9ebeb
-// #f8afa0
-// #efe3d7
-// #fed19a
-
 @mixin tablet {
   @media screen and (min-width: 767px) {
     @content;

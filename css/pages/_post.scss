@@ -1,0 +1,83 @@
+.tmpl-post .hero {
+  padding-top: 10rem;
+  padding-bottom: 2rem;
+}
+
+.tmpl-post .post {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: 1fr;
+
+  @include tablet {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+}
+
+.resume--experience {
+  padding: 0;
+}
+
+.resume--jobs {
+  list-style-type: none;
+  padding-left: 1.65rem;
+  border-left: 1px dashed $gray;
+  position: relative;
+  z-index: 1;
+
+  li.job {
+    position: relative;
+    margin-bottom: 3rem;
+
+    &:before {
+      content: '';
+      background-color: white;
+      width: 0.5rem;
+      height: 0.5rem;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: calc(100% + 1rem);
+      border-radius: 50%;
+      border: 8px solid $accent;
+      z-index: 2;
+    }
+    &:last-child:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      right: calc(100% + 1.35rem);
+      background-color: #fff;
+      display: block;
+      width: 10px;
+      z-index: 1;
+    }
+  }
+
+  .job--title {
+    font-size: 1.5em;
+    line-height: 1;
+  }
+  
+  .job--company {
+    font-style: italic;
+    margin-bottom: 0 !important;
+  }
+  
+  .job--dates {
+
+  }
+  
+  .job--description,
+  .job--description * {
+    font-size: 0.9em;
+    margin-bottom: 1em;
+  }
+  
+
+}

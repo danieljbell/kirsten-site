@@ -60,6 +60,38 @@
   }
 }
 
+.work--grid {
+  list-style-type: none;
+  padding: 0;
+}
+
+.work--item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 3rem;
+  padding-bottom: 8rem;
+  align-items: center;
+
+  &:nth-child(even) {
+    grid-template-columns: 2fr 1fr;
+    .work--content {
+      order: -1;
+    }
+  }
+
+  .work--title a {
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+    font-size: 2rem;
+  }
+  
+  .work--excerpt {
+    margin-bottom: 2rem;;
+  }
+
+}
+
 .contact-me {
   background-color: $brand;
 
