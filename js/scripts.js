@@ -4,15 +4,20 @@
 
   function init() {
 
-    if (window.location.pathname === '/') {
+    if (window.location.pathname === '/' || window.location.pathname === '/work/') {
       setUpWaypoints();
     }
 
     this.pageHeader = document.querySelector('header');
     this.menuToggle = document.querySelector('#menuToggle');
+    this.contactForm = document.querySelector('form[name="contact"]');
 
     document.addEventListener('scroll', slimHeader);
     document.addEventListener('click', toggleSiteMenu);
+
+    if (this.contactForm) {
+      contactForm.addEventListener('submit', submitContactForm);
+    }
 
   }
 
@@ -61,6 +66,26 @@ function setUpWaypoints() {
   });
 }
 
+function submitContactForm(e) {
+  e.preventDefault();
+  // console.log();
+  atomic(e.target.action, {
+    method: 'POST',
+    data: serialize(e.target),
+    headers: {
+      'Content-type': 'application/x-www-form-urlencoded'
+    }
+  })
+    .then(function (response) {
+      console.log(response.data); // xhr.responseText
+      console.log(response.xhr);  // full response
+    })
+    .catch(function (error) {
+      console.log(error.status); // xhr.status
+      console.log(error.statusText); // xhr.statusText
+    });
+}
+
 
 
 /* 
@@ -81,3 +106,39 @@ if (window.Element && !Element.prototype.closest) {
       return el;
     };
 }
+
+/*
+===============
+SERIALIZE FORM
+===============
+*/
+var serialize = function (form) {
+
+  // Setup our serialized data
+  var serialized = [];
+
+  // Loop through each field in the form
+  for (var i = 0; i < form.elements.length; i++) {
+
+    var field = form.elements[i];
+
+    // Don't serialize fields without a name, submits, buttons, file and reset inputs, and disabled fields
+    if (!field.name || field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button') continue;
+
+    // If a multi-select, get all selections
+    if (field.type === 'select-multiple') {
+      for (var n = 0; n < field.options.length; n++) {
+        if (!field.options[n].selected) continue;
+        serialized.push(encodeURIComponent(field.name) + "=" + encodeURIComponent(field.options[n].value));
+      }
+    }
+
+    // Convert field data to a query string
+    else if ((field.type !== 'checkbox' && field.type !== 'radio') || field.checked) {
+      serialized.push(encodeURIComponent(field.name) + "=" + encodeURIComponent(field.value));
+    }
+  }
+
+  return serialized.join('&');
+
+};

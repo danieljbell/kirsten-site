@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ '/css/global.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
   </head>
-  <body class="page--{{page.inputPath.split('/')[1]}}">
+  <body class="page--{{page.inputPath.split('/')[1].split('.')[0]}}">
 
     {% include "_header.njk" %}
 
@@ -19,8 +19,11 @@
     {% include "_footer.njk" %}
 
     <!-- Current page: {{ page.url }} -->
-    {% if page.url === '/' %}
+    {% if page.url === '/' or page.url === '/work/' %}
       <script src="{{ '/js/waypoints.js' | url }}"></script>
+    {% endif %}
+    {% if page.url === '/' %}
+      <script src="{{ '/js/atomic.js' | url }}"></script>
     {% endif %}
     <script src="{{ '/js/scripts.js' | url }}"></script>
 

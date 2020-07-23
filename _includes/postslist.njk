@@ -1,14 +1,16 @@
-<ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
-{% for post in postslist | reverse %}
-  <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-    <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-    <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-    {% for tag in post.data.tags %}
-      {%- if collections.tagList.indexOf(tag) != -1 -%}
-      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-      <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
-      {%- endif -%}
-    {% endfor %}
-  </li>
-{% endfor %}
-</ol>
+<ul class="work--grid">
+  {%- for post in collections.work -%}
+    <li class="work--item {{post.data.color}}">
+      <div class="work--image">
+        <a href="{{post.url}}">
+          <img src="{{post.data.icon}}" alt="{{ post.data.title }} thumbnail">
+        </a>
+      </div>
+      <div class="work--content">
+        <h4 class="work--title"><a href="{{post.url}}">{{ post.data.title }}</a></h4>
+        <p class="work--excerpt">{{ post.data.excerpt | safe }}</p>
+        <a href="{{post.url}}" class="button">Read More</a>
+      </div>
+    </li>
+  {%- endfor -%}
+</ul>

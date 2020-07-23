@@ -26,6 +26,7 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
   });
 
+
   // Get the first `n` elements of a collection.
   eleventyConfig.addFilter("head", (array, n) => {
     if (n < 0) {
@@ -43,7 +44,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("js/*.js");
 
   eleventyConfig.addPassthroughCopy({
-    "node_modules/waypoints/lib/noframework.waypoints.min.js": "js/waypoints.js"
+    "node_modules/waypoints/lib/noframework.waypoints.min.js": "js/waypoints.js",
+    "node_modules/atomicjs/dist/atomic.min.js": "js/atomic.js"
   });
 
   /* Markdown Overrides */

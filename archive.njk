@@ -1,16 +1,22 @@
 ---
-layout: layouts/home.njk
+layout: layouts/base.njk
 permalink: /work/
+title: Work
 eleventyNavigation:
   key: Work
   order: 2
 ---
 
+<section class="hero">
+  <div class="site-width">
+    <h1>{{title}}</h1>
+  </div>
+</section>
+
 <section>
   <div class="site-width">
-    <h1>Archive</h1>
-    
-    {% set postslist = collections.posts %}
+       
+    {% set postslist = collections.work %}
     {% include "postslist.njk" %}
 
   </div>

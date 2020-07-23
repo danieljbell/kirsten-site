@@ -22,22 +22,7 @@ layout: layouts/home.njk
     <header>
       <h2>The Proof is in the Pudding</h2>
     </header>
-    <ul class="work--grid">
-      {%- for post in collections.work -%}
-        <li class="work--item {{post.data.color}}">
-          <div class="work--image">
-            <a href="{{post.url}}">
-              <img src="{{post.data.icon}}" alt="{{ post.data.title }} thumbnail">
-            </a>
-          </div>
-          <div class="work--content">
-            <h4 class="work--title"><a href="{{post.url}}">{{ post.data.title }}</a></h4>
-            <p class="work--excerpt">{{ post.data.excerpt | safe }}</p>
-            <a href="{{post.url}}" class="button">Read More</a>
-          </div>
-        </li>
-      {%- endfor -%}
-    </ul>
+    {% include "postslist.njk" %}
   </div>
 </section>
 
@@ -46,7 +31,7 @@ layout: layouts/home.njk
     <header>
       <h2>Contact Me</h2>
     </header>
-    <form class="contact-form" netlify>
+    <form class="contact-form" netlify name="contact" method="POST">
       <div class="field">
         <label for="firstName">First Name</label>
         <input type="text" name="firstName" id="firstName" placeholder="First Name">
