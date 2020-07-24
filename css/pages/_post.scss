@@ -61,7 +61,7 @@
 
   @include tablet {
     display: grid;
-    grid-template-columns: 200px auto 200px;
+    grid-template-columns: 1fr 65ch 1fr;
     
     article {
       grid-column: 2/3;
@@ -70,8 +70,14 @@
   }
 
 
-  p {
+  p,
+  ul,
+  ol {
     margin-bottom: 1rem;
+  }
+
+  .list-header {
+    margin-bottom: 0;
   }
 
 }

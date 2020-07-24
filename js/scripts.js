@@ -10,14 +10,14 @@
 
     this.pageHeader = document.querySelector('header');
     this.menuToggle = document.querySelector('#menuToggle');
-    this.contactForm = document.querySelector('form[name="contact"]');
+    // this.contactForm = document.querySelector('form[name="contact"]');
 
     document.addEventListener('scroll', slimHeader);
     document.addEventListener('click', toggleSiteMenu);
 
-    if (this.contactForm) {
-      contactForm.addEventListener('submit', submitContactForm);
-    }
+    // if (this.contactForm) {
+    //   contactForm.addEventListener('submit', submitContactForm);
+    // }
 
   }
 
@@ -66,25 +66,25 @@ function setUpWaypoints() {
   });
 }
 
-function submitContactForm(e) {
-  e.preventDefault();
-  // console.log();
-  atomic(e.target.action, {
-    method: 'POST',
-    data: serialize(e.target),
-    headers: {
-      'Content-type': 'application/x-www-form-urlencoded'
-    }
-  })
-    .then(function (response) {
-      console.log(response.data); // xhr.responseText
-      console.log(response.xhr);  // full response
-    })
-    .catch(function (error) {
-      console.log(error.status); // xhr.status
-      console.log(error.statusText); // xhr.statusText
-    });
-}
+// function submitContactForm(e) {
+//   e.preventDefault();
+//   console.log(serialize(e.target));
+//   atomic(e.target.action, {
+//     method: 'POST',
+//     data: serialize(e.target),
+//     headers: {
+//       'Content-Type': 'application/x-www-form-urlencoded'
+//     }
+//   })
+//     .then(function (response) {
+//       console.log(response.data); // xhr.responseText
+//       console.log(response.xhr);  // full response
+//     })
+//     .catch(function (error) {
+//       console.log(error.status); // xhr.status
+//       console.log(error.statusText); // xhr.statusText
+//     });
+// }
 
 
 

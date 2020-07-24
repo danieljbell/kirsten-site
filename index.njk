@@ -31,7 +31,7 @@ layout: layouts/home.njk
     <header>
       <h2>Contact Me</h2>
     </header>
-    <form class="contact-form" netlify name="contact" method="POST">
+    <form class="contact-form" netlify="true" name="contact" method="POST" action="/thanks">
       <div class="field">
         <label for="firstName">First Name</label>
         <input type="text" name="firstName" id="firstName" placeholder="First Name">
