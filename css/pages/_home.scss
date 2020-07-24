@@ -115,7 +115,8 @@
   }
 
   .work--image img {
-    max-width: 75%;
+    max-width: 175px;
+    max-height: 175px;
     transform: translateY(150%) scale(0.5);
     transition: transform 600ms cubic-bezier(0, 0, 0, 1.59);
   }
