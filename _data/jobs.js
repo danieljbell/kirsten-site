@@ -4,9 +4,17 @@ module.exports = () => {
     {
       company: 'MJ Insurance',
       location: 'Indianapolis, IN',
+      title: 'Manager, Benefits Communication + Engagement',
+      dates: 'Nov 2020 - present',
+      description: '<p>I currently lead the communications team within our Employee Benefits department. I consult our clients on matters relative to employee engagement and benefit education while designing, developing and implementing custom campaigns, or when necessary, advising on behalf of the client through a point solutions campaign.</p><p>My consulting revolves around three main employee experiences which include on-boarding, year-round benefits and employee-culture engagement, and Open Enrollment. While the backbone of my teams’ work revolves around employee benefits, it’s technology, data, and empathy that ultimately will drive client success.</p><p>I currently manage a book of 100 clients with the help of my amazing team. I also introduced engagement KPIs into our annual Stewardship Report and use our data analytics tool, Aperture, to drive my messaging. My success is based off the optimal utilization of benefits and “optimal utilization” is based off the data. My favorite thing is a story but data’s cool too.</p>',
+      url: 'https://www.mjinsurance.com/'
+    },
+    {
+      company: 'MJ Insurance',
+      location: 'Indianapolis, IN',
       title: 'Communication Specialist',
-      dates: 'Feb 2016 - present',
-      description: '<p>I currently function as a Communications Specialist within our Employee Benefits department. I consult our clients on matters relative to employee engagement and benefit education while designing, developing and implementing custom campaigns, or when necessary, advising on behalf of the client through a point solutions campaign.</p><p>I currently manage and run 25 custom client campaigns and roughly 100 semi-custom client campaigns. I also introduced engagement KPIs into our annual Stewardship Report and use our data analytics tool, Aperture, to drive my messaging. My success is based off the optimal utilization of benefits and \“optimal utilization\” is based off the data.</p>',
+      dates: 'Feb 2016 - Nov 2020',
+      description: '',
       url: 'https://www.mjinsurance.com/'
     },
     {
