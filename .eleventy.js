@@ -40,6 +40,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("files");
+  eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addWatchTarget("js/*.js");
 
   eleventyConfig.addPassthroughCopy({

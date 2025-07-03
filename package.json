@@ -3,7 +3,7 @@
   "version": "5.0.2",
   "description": "A starter repository for a blog web site using the Eleventy static site generator.",
   "scripts": {
-    "build:css": "node-sass css/global.scss _site/css/global.css --output-style compressed",
+    "build:css": "node-sass css/global.scss assets/css/global.css --output-style compressed",
     "build": "npm run build:css && eleventy",
     "watch": "npm run build:css && eleventy --watch",
     "serve": "npm run build:css && eleventy --serve",
