@@ -1,18 +1,16 @@
-@import 'modules/_variables';
+@import "modules/_variables";
 
-@import '../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
-@import '../node_modules/hamburgers/_sass/hamburgers/_base';
-@import '../node_modules/hamburgers/_sass/hamburgers/types/_spin';
+@import "modules/_hamburger";
 
-@import 'modules/_reset';
-@import 'modules/_typography';
-@import 'modules/_header';
-@import 'modules/_buttons';
-@import 'modules/_footer';
-@import 'modules/_forms';
+@import "modules/_reset";
+@import "modules/_typography";
+@import "modules/_header";
+@import "modules/_buttons";
+@import "modules/_footer";
+@import "modules/_forms";
 
-@import 'pages/_home';
-@import 'pages/_post';
-@import 'pages/_archive';
+@import "pages/_home";
+@import "pages/_post";
+@import "pages/_archive";
 
-@import 'modules/_utilities';
+@import "modules/_utilities";
